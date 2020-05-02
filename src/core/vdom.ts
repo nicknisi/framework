@@ -63,6 +63,7 @@ export interface BaseNodeWrapper {
 	hasAnimations?: boolean;
 	parentId: string;
 	childDomWrapperId?: string;
+	childDomWRapperNode?: Node;
 }
 
 export interface WNodeWrapper extends BaseNodeWrapper {
@@ -128,6 +129,7 @@ export interface Renderer {
 	invalidate(): void;
 	mount(mountOptions?: Partial<MountOptions>): void;
 	unmount(): void;
+	getNode(): Node;
 }
 
 interface ProcessItem {
